@@ -2,9 +2,18 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 exports.default = {
   mode: process.env.NODE_ENV || 'development',
+  entry: './src/index.ts',
   output: {
     clean: true,
     filename: 'bundle.js',
+  },
+  module: {
+    rules: [
+      { test: /\.ts$/, use: 'ts-loader' },
+    ],
+  },
+  resolve: {
+    extensions: ['.ts'],
   },
   plugins: [
     new HtmlWebpackPlugin({ template: 'index.html' }),
