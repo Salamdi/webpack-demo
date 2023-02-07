@@ -5,6 +5,7 @@ body {
 h1 {
   text-align: center;
   margin-top: 2em;
+  font-size: 1.5em;
 }
 
 form {
@@ -65,5 +66,20 @@ li:hover {
 li.completed {
   text-decoration: line-through;
   color: #ccc;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#logo {
+  background-image: url(files/logo.png);
+  background-size: contain;
+  width: 10rem;
+  height: 2.4rem;
 }
 
